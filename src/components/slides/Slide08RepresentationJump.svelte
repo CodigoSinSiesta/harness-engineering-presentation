@@ -9,11 +9,17 @@
 
   onMount(() => {
     animateSlideEntrance(slideElement);
-    setTimeout(() => {
-      if (beforeEl) animateCounter(beforeEl, 30, 1.5);
-      if (afterEl) animateCounter(afterEl, 47, 1.8);
-      if (deltaEl) animateCounter(deltaEl, 17, 1.5);
-    }, 600);
+
+    const replay = () => {
+      setTimeout(() => {
+        if (beforeEl) animateCounter(beforeEl, 30, 1.5);
+        if (afterEl) animateCounter(afterEl, 47, 1.8);
+        if (deltaEl) animateCounter(deltaEl, 17, 1.5);
+      }, 600);
+    };
+
+    slideElement.addEventListener('slide-activated', replay);
+    return () => slideElement.removeEventListener('slide-activated', replay);
   });
 </script>
 
@@ -22,8 +28,8 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 7 · El experimento de migración · OS-Symphony → NLAH</p>
-      <h2 class="title">Same logic. Same model. <span class="grad">+16.8 pts.</span></h2>
+      <p class="label">Slide 8 · El experimento de migración · OS-Symphony → NLAH</p>
+      <h2 class="title">Misma lógica. Mismo modelo. <span class="grad">+16.8 pts.</span></h2>
       <p class="subtitle">
         Tomas un harness escrito en código nativo. Lo migras a representación NLAH.
         No tocas el algoritmo. No cambias el modelo. Solo cambias <em>cómo se expresa</em>.
@@ -33,17 +39,17 @@
     <section class="card-glass migration">
       <div class="migration-row">
         <div class="side side-before">
-          <span class="side-tag">Before · Code Harness</span>
+          <span class="side-tag">Antes · Arnés en código</span>
           <span class="side-name">OS-Symphony</span>
           <pre class="snippet">screenshot()
 find_element()
 click()
 verify()
-<span class="repair">// repair loop ↺</span></pre>
+<span class="repair">// bucle de reparación ↺</span></pre>
           <div class="side-stats">
-            <div class="stat"><span class="stat-num"><span bind:this={beforeEl}>0</span>.4%</span><span class="stat-label">accuracy</span></div>
+            <div class="stat"><span class="stat-num"><span bind:this={beforeEl}>0</span>.4%</span><span class="stat-label">precisión</span></div>
             <div class="stat"><span class="stat-num">361'</span><span class="stat-label">runtime</span></div>
-            <div class="stat"><span class="stat-num">1,200</span><span class="stat-label">LLM calls</span></div>
+            <div class="stat"><span class="stat-num">1,200</span><span class="stat-label">llamadas LLM</span></div>
           </div>
         </div>
 
@@ -52,11 +58,11 @@ verify()
             <line x1="10" y1="40" x2="86" y2="40" stroke="#60A5FA" stroke-width="2.5"/>
             <polygon points="86,40 76,33 76,47" fill="#60A5FA"/>
           </svg>
-          <span class="arrow-label">Same strategy<br/>Different representation</span>
+          <span class="arrow-label">Misma estrategia<br/>Distinta representación</span>
         </div>
 
         <div class="side side-after">
-          <span class="side-tag side-tag-after">After · Natural-Language Harness</span>
+          <span class="side-tag side-tag-after">Después · Arnés en lenguaje natural</span>
           <span class="side-name">NLAH</span>
           <pre class="snippet">Task Definition ✓
   objective &amp; scope
@@ -67,9 +73,9 @@ State Schema ✓
 Completion Criteria ✓
   artifact-backed verification</pre>
           <div class="side-stats">
-            <div class="stat stat-good"><span class="stat-num"><span bind:this={afterEl}>0</span>.2%</span><span class="stat-label">accuracy</span></div>
+            <div class="stat stat-good"><span class="stat-num"><span bind:this={afterEl}>0</span>.2%</span><span class="stat-label">precisión</span></div>
             <div class="stat stat-good"><span class="stat-num">141'</span><span class="stat-label">runtime</span></div>
-            <div class="stat stat-good"><span class="stat-num">34</span><span class="stat-label">LLM calls</span></div>
+            <div class="stat stat-good"><span class="stat-num">34</span><span class="stat-label">llamadas LLM</span></div>
           </div>
         </div>
       </div>
@@ -78,7 +84,7 @@ Completion Criteria ✓
         <div class="delta-cell">
           <span class="delta-icon">▲</span>
           <span class="delta-num">+<span bind:this={deltaEl}>0</span> pts</span>
-          <span class="delta-label">accuracy (representación pura)</span>
+          <span class="delta-label">precisión (representación pura)</span>
         </div>
         <div class="delta-cell">
           <span class="delta-icon">▼</span>
@@ -88,7 +94,7 @@ Completion Criteria ✓
         <div class="delta-cell">
           <span class="delta-icon">▼</span>
           <span class="delta-num">−97%</span>
-          <span class="delta-label">LLM calls</span>
+          <span class="delta-label">llamadas LLM</span>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-# Slide 11 — Las tres eras
+# Slide 12 — Las tres eras
 
 ## Tesis
 Cada era del campo absorbe la anterior y añade una capa. Prompt engineering (2022) → context engineering (2024) → harness engineering (2026). El harness engineering no reemplaza, incluye.

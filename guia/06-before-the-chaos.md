@@ -1,4 +1,4 @@
-# Slide 5 — El estado caótico antes de la formalización
+# Slide 6 — El estado caótico antes de la formalización
 
 ## Tesis
 Sin representación explícita del harness, la ablación es imposible. Dos sistemas que "diferían en una decisión" en realidad diferían simultáneamente en cuatro dimensiones — y nadie podía aislar cuál importaba.

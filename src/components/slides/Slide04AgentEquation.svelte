@@ -7,9 +7,15 @@
 
   onMount(() => {
     animateSlideEntrance(slideElement);
-    setTimeout(() => {
-      if (svgEl) animateLineDraw(svgEl, 1.6);
-    }, 600);
+
+    const replay = () => {
+      setTimeout(() => {
+        if (svgEl) animateLineDraw(svgEl, 1.6);
+      }, 600);
+    };
+
+    slideElement.addEventListener("slide-activated", replay);
+    return () => slideElement.removeEventListener("slide-activated", replay);
   });
 </script>
 
@@ -18,7 +24,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 3 · La ecuación</p>
+      <p class="label">Slide 4 · La ecuación</p>
       <h2 class="title">Agent <span class="op">=</span> Model <span class="op">+</span> <span class="grad">Harness</span></h2>
       <p class="subtitle">Si no eres el modelo, eres el harness. — LangChain</p>
     </header>
@@ -40,22 +46,22 @@
         <rect x="20" y="20" width="860" height="320" rx="16" ry="16"
           fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="6 4" />
         <text x="40" y="48" fill="#60A5FA" font-family="JetBrains Mono" font-size="13" letter-spacing="0.12em">
-          HARNESS · OS LAYER
+          ARNÉS · CAPA DEL SO
         </text>
 
         <!-- CPU = LLM -->
         <g>
           <rect x="350" y="120" width="200" height="100" rx="10" fill="#1E3A8A" stroke="#60A5FA" stroke-width="2"/>
           <text x="370" y="155" fill="#FAF9F6" font-family="Space Grotesk" font-size="20" font-weight="800">CPU</text>
-          <text x="370" y="180" fill="#60A5FA" font-family="JetBrains Mono" font-size="13">= Raw LLM</text>
-          <text x="370" y="205" fill="#FAF9F6" font-family="Space Grotesk" font-size="14" opacity="0.7">model weights</text>
+          <text x="370" y="180" fill="#60A5FA" font-family="JetBrains Mono" font-size="13">= LLM en bruto</text>
+          <text x="370" y="205" fill="#FAF9F6" font-family="Space Grotesk" font-size="14" opacity="0.7">pesos del modelo</text>
         </g>
 
         <!-- RAM = context window -->
         <g>
           <rect x="60" y="80" width="190" height="68" rx="8" fill="rgba(59,130,246,0.18)" stroke="#3B82F6" stroke-width="1.5"/>
           <text x="78" y="108" fill="#FAF9F6" font-family="Space Grotesk" font-size="16" font-weight="700">RAM</text>
-          <text x="78" y="130" fill="#60A5FA" font-family="JetBrains Mono" font-size="12">= Context Window</text>
+          <text x="78" y="130" fill="#60A5FA" font-family="JetBrains Mono" font-size="12">= Ventana de contexto</text>
           <line x1="250" y1="120" x2="350" y2="155" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="4 3"/>
         </g>
 
@@ -63,7 +69,7 @@
         <g>
           <rect x="60" y="220" width="190" height="68" rx="8" fill="rgba(167,139,250,0.18)" stroke="#a78bfa" stroke-width="1.5"/>
           <text x="78" y="248" fill="#FAF9F6" font-family="Space Grotesk" font-size="16" font-weight="700">DISK</text>
-          <text x="78" y="270" fill="#a78bfa" font-family="JetBrains Mono" font-size="12">= External DBs / files</text>
+          <text x="78" y="270" fill="#a78bfa" font-family="JetBrains Mono" font-size="12">= BBDD externas / ficheros</text>
           <line x1="250" y1="240" x2="350" y2="195" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4 3"/>
         </g>
 
@@ -71,7 +77,7 @@
         <g>
           <rect x="650" y="80" width="200" height="68" rx="8" fill="rgba(96,165,250,0.18)" stroke="#60A5FA" stroke-width="1.5"/>
           <text x="668" y="108" fill="#FAF9F6" font-family="Space Grotesk" font-size="16" font-weight="700">DRIVERS</text>
-          <text x="668" y="130" fill="#60A5FA" font-family="JetBrains Mono" font-size="12">= Tool integrations</text>
+          <text x="668" y="130" fill="#60A5FA" font-family="JetBrains Mono" font-size="12">= Integración de herramientas</text>
           <line x1="650" y1="120" x2="550" y2="155" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="4 3"/>
         </g>
 
@@ -79,14 +85,14 @@
         <g>
           <rect x="650" y="220" width="200" height="68" rx="8" fill="rgba(96,165,250,0.18)" stroke="#60A5FA" stroke-width="1.5"/>
           <text x="668" y="248" fill="#FAF9F6" font-family="Space Grotesk" font-size="16" font-weight="700">I/O</text>
-          <text x="668" y="270" fill="#60A5FA" font-family="JetBrains Mono" font-size="12">= Orchestration loops</text>
+          <text x="668" y="270" fill="#60A5FA" font-family="JetBrains Mono" font-size="12">= Bucles de orquestación</text>
           <line x1="650" y1="240" x2="550" y2="195" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="4 3"/>
         </g>
       </svg>
 
       <p class="caption">
-        <span class="quote">"Everything that isn't model weights"</span>
-        — system prompts, tools, orchestration, memory, verification, safety.
+        <span class="quote">"Todo lo que no son pesos del modelo"</span>
+        — prompts del sistema, herramientas, orquestación, memoria, verificación, seguridad.
       </p>
     </section>
   </div>

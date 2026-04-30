@@ -8,23 +8,23 @@
   const cases = [
     {
       org: 'Vercel',
-      action: 'Quitó el 80% de las tools de un agente',
+      action: 'Quitó el 80% de las herramientas de un agente',
       result: '→ mejores resultados',
-      tag: 'TOOLS −80%',
+      tag: 'HERRAMIENTAS −80%',
       color: '#22c55e'
     },
     {
       org: 'Manus',
       action: 'Reescribió su harness 5 veces en 6 meses',
       result: '→ cada vez más simple',
-      tag: 'REWRITES ×5',
+      tag: 'REESCRITURAS ×5',
       color: '#a78bfa'
     },
     {
       org: 'Anthropic',
       action: 'Eliminó context resets cuando Opus 4.6 dejó de necesitarlos',
       result: '→ asunción caducada, removida',
-      tag: 'RESETS −100%',
+      tag: 'REINICIOS −100%',
       color: '#60A5FA'
     }
   ];
@@ -35,7 +35,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 12 · La forma extraña que toma la disciplina</p>
+      <p class="label">Slide 13 · La forma extraña que toma la disciplina</p>
       <h2 class="title">Es <span class="grad">un oficio de sustracción</span> tanto como de adición.</h2>
       <p class="subtitle">
         Cada componente del harness <strong>codifica una asunción</strong> sobre lo que el modelo no puede hacer solo.

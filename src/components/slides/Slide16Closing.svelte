@@ -12,10 +12,10 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 14 · Cierre</p>
+      <p class="label">Slide 16 · Cierre</p>
       <h2 class="title">
-        It's no longer a question of <span class="strike">which model to pick</span>.<br/>
-        It's a question of <span class="grad">which structure to remove</span>.
+        Ya no es cuestión de <span class="strike">qué modelo elegir</span>.<br/>
+        Es cuestión de <span class="grad">qué estructura quitar</span>.
       </h2>
     </header>
 

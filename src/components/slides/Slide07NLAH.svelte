@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 6 · Paper 1 · NLAH · Tsinghua · Marzo 2026</p>
+      <p class="label">Slide 7 · Paper 1 · NLAH · Tsinghua · Marzo 2026</p>
       <h2 class="title">Hacer el harness <span class="grad">explícito</span> para poder ablararlo.</h2>
       <p class="subtitle">
         Pan et al. proponen escribir la lógica de control del agente en
@@ -24,7 +24,7 @@
         <div class="layer-head">
           <span class="layer-tag tag-swap">SWAP</span>
           <h3>NLAH</h3>
-          <span class="layer-sub">Task-specific logic</span>
+          <span class="layer-sub">Lógica específica de tarea</span>
         </div>
         <ul class="layer-items">
           <li><code>Contracts</code></li>
@@ -41,12 +41,12 @@
         <div class="layer-head">
           <span class="layer-tag tag-fixed">FIXED</span>
           <h3>Runtime Charter</h3>
-          <span class="layer-sub">Universal physics</span>
+          <span class="layer-sub">Reglas universales</span>
         </div>
         <ul class="layer-items">
           <li>cómo se vinculan los <code>contracts</code></li>
           <li>cómo persiste el <code>state</code></li>
-          <li>cómo se gestionan <code>child agents</code></li>
+          <li>cómo se gestionan los agentes hijos</li>
         </ul>
         <p class="layer-why">
           Compartido entre tareas. Las "leyes físicas" del runtime.
@@ -57,15 +57,15 @@
         <div class="layer-head">
           <span class="layer-tag tag-base">INFRA</span>
           <h3>Backend</h3>
-          <span class="layer-sub">Tools &amp; primitives</span>
+          <span class="layer-sub">Herramientas y primitivas</span>
         </div>
         <ul class="layer-items">
-          <li>terminal tools</li>
-          <li>multi-agent interface</li>
-          <li><code>spawn &amp; wait</code> primitives</li>
+          <li>herramientas de terminal</li>
+          <li>interfaz multi-agente</li>
+          <li>primitivas <code>spawn &amp; wait</code></li>
         </ul>
         <p class="layer-why">
-          La infraestructura de bajo nivel. Igual para todos los harnesses.
+          La infraestructura de bajo nivel. Igual para todos los arneses.
         </p>
       </div>
     </section>
@@ -77,7 +77,7 @@
       </div>
       <div class="insight-grid">
         <div>
-          <h4>Clean ablation, at last.</h4>
+          <h4>Ablación limpia, por fin.</h4>
           <p>
             Fijas el Charter, intercambias el NLAH → testeas <em>diseño del harness</em>.
             Fijas el NLAH, cambias el Charter → testeas <em>política del runtime</em>.
@@ -86,8 +86,8 @@
         <div>
           <h4>Dos mecanismos lo sostienen.</h4>
           <p>
-            <strong>Execution Contracts</strong> (function signatures para agentes) +
-            <strong>File-Backed State</strong> (memoria con path como dirección).
+            <strong>Execution Contracts</strong> (firmas de función para agentes) +
+            <strong>File-Backed State</strong> (memoria con la ruta del fichero como dirección).
           </p>
         </div>
       </div>

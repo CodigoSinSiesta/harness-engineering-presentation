@@ -1,4 +1,4 @@
-# Slide 10 — La transferibilidad
+# Slide 11 — La transferibilidad
 
 ## Tesis
 Un harness optimizado sobre un modelo se transfiere a otros y mejora todos. El asset reutilizable ya no es el modelo: es el harness. Esto cambia la economía del producto.

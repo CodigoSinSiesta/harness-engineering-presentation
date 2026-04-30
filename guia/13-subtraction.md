@@ -1,4 +1,4 @@
-# Slide 12 — El oficio de sustracción
+# Slide 13 — El oficio de sustracción
 
 ## Tesis
 Cada componente del harness codifica una asunción sobre lo que el modelo no puede hacer solo. Cuando el modelo aprende a hacerlo, el componente caduca. La disciplina madura es podar.
@@ -21,4 +21,4 @@ Cada componente del harness codifica una asunción sobre lo que el modelo no pue
 - *"¿Y si lo quito y mañana lo necesito?"* → Es código en git. Lo restauras. Pero la deuda de mantener algo "por si acaso" es real y silenciosa.
 
 ## Transición
-"Resumimos los cinco hallazgos que reformulan el campo y las acciones concretas que salen de ellos."
+"Toda esta teoría aterriza en una estructura de ficheros sorprendentemente pequeña. Vamos a verla."

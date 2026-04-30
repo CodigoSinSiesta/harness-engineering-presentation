@@ -1,4 +1,4 @@
-# Slide 6 — NLAH (Tsinghua, marzo 2026)
+# Slide 7 — NLAH (Tsinghua, marzo 2026)
 
 ## Tesis
 Pan et al. proponen separar el harness en tres capas con responsabilidades distintas. La capa de arriba (NLAH) es swappable; la del medio (Charter) es fija. Eso permite ablación controlada.

@@ -7,9 +7,15 @@
 
   onMount(() => {
     animateSlideEntrance(slideElement);
-    setTimeout(() => {
-      if (svgEl) animateLineDraw(svgEl, 1.6);
-    }, 600);
+
+    const replay = () => {
+      setTimeout(() => {
+        if (svgEl) animateLineDraw(svgEl, 1.6);
+      }, 600);
+    };
+
+    slideElement.addEventListener("slide-activated", replay);
+    return () => slideElement.removeEventListener("slide-activated", replay);
   });
 
   const models = [
@@ -26,22 +32,22 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 10 · Lo que cambia el cálculo</p>
+      <p class="label">Slide 11 · Lo que cambia el cálculo</p>
       <h2 class="title">Un harness optimizado <span class="grad">se transfiere.</span></h2>
       <p class="subtitle">
-        El asset reutilizable ya no es el modelo. Es el harness.
+        El activo reutilizable ya no es el modelo. Es el harness.
         Optimizas con uno, mejoras los otros cinco.
       </p>
     </header>
 
     <section class="card-glass transfer-block">
-      <svg class="transfer-svg" viewBox="0 0 1000 400" bind:this={svgEl} role="img" aria-label="Un harness optimizado mejora cinco modelos distintos">
+      <svg class="transfer-svg" viewBox="0 0 1000 400" bind:this={svgEl} role="img" aria-label="Un harness optimizado mejora cinco modelos distintos" data-preserve-direction>
         <!-- Harness origin -->
         <g>
           <rect x="40" y="160" width="220" height="80" rx="12" fill="rgba(34,197,94,0.18)" stroke="#22c55e" stroke-width="2.5"/>
           <text x="60" y="186" font-family="JetBrains Mono" font-size="11" fill="#22c55e" letter-spacing="0.1em">META-HARNESS</text>
-          <text x="60" y="210" font-family="Space Grotesk" font-size="18" font-weight="800" fill="#FAF9F6">Auto-optimized</text>
-          <text x="60" y="228" font-family="JetBrains Mono" font-size="11" fill="#a78bfa">trained on Opus 4.6</text>
+          <text x="60" y="210" font-family="Space Grotesk" font-size="18" font-weight="800" fill="#FAF9F6">Auto-optimizado</text>
+          <text x="60" y="228" font-family="JetBrains Mono" font-size="11" fill="#a78bfa">entrenado sobre Opus 4.6</text>
         </g>
 
         <!-- Models with deltas -->
@@ -75,7 +81,7 @@
         {/each}
 
         <!-- Annotation -->
-        <text x="450" y="40" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#60A5FA" letter-spacing="0.12em">1 HARNESS → 5 MODELS → ALL IMPROVED</text>
+        <text x="450" y="40" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#60A5FA" letter-spacing="0.12em">1 ARNÉS → 5 MODELOS → TODOS MEJORAN</text>
       </svg>
 
       <div class="implications">
@@ -85,7 +91,7 @@
         </div>
         <div class="impl">
           <span class="impl-num">2</span>
-          <p><strong>Reduce el lock-in.</strong> El activo portable es la lógica del harness, no el contrato con el proveedor.</p>
+          <p><strong>Reduce la dependencia del proveedor.</strong> El activo portable es la lógica del harness, no el contrato con el proveedor.</p>
         </div>
         <div class="impl">
           <span class="impl-num">3</span>

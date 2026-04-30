@@ -1,4 +1,4 @@
-# Slide 4 — Los 5 patrones canónicos
+# Slide 5 — Los 5 patrones canónicos
 
 ## Tesis
 Anthropic identificó 5 topologías de orquestación que cubren la mayoría de agentes en producción. No son alternativas mutuamente excluyentes — un agente real combina varios.

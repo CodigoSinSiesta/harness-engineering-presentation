@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 11 · Las tres eras</p>
+      <p class="label">Slide 12 · Las tres eras</p>
       <h2 class="title">Cada era <span class="grad">absorbe</span> la anterior.</h2>
       <p class="subtitle">
         Tres disciplinas en cuatro años. Cada una contiene a la previa y añade una capa de control.
@@ -22,17 +22,17 @@
       <div class="era era-3">
         <div class="era-label">2026</div>
         <div class="era-name">Harness Engineering</div>
-        <div class="era-add">+ orquestación · memoria · verificación · safety</div>
+        <div class="era-add">+ orquestación · memoria · verificación · seguridad</div>
 
         <div class="era era-2">
           <div class="era-label">2024</div>
           <div class="era-name">Context Engineering</div>
-          <div class="era-add">+ retrieval · ventana · prioridad de información</div>
+          <div class="era-add">+ recuperación · ventana · prioridad de información</div>
 
           <div class="era era-1">
             <div class="era-label">2022</div>
             <div class="era-name">Prompt Engineering</div>
-            <div class="era-add">+ instrucción · few-shot · role-play</div>
+            <div class="era-add">+ instrucción · few-shot · interpretación de roles</div>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
 
     <p class="punchline">
       El harness engineering <strong>no reemplaza</strong> saber escribir prompts ni gestionar contexto.
-      <strong>Los incluye</strong> — y añade orquestación, memoria, verificación y safety como problemas de primer orden.
+      <strong>Los incluye</strong> — y añade orquestación, memoria, verificación y seguridad como problemas de primer orden.
     </p>
   </div>
 </div>

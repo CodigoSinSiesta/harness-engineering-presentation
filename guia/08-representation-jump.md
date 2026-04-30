@@ -1,4 +1,4 @@
-# Slide 7 — +16.8 puntos solo por representación
+# Slide 8 — +16.8 puntos solo por representación
 
 ## Tesis
 Migrar OS-Symphony (harness en código nativo) a representación NLAH, sin tocar el algoritmo ni cambiar el modelo, da +16.8 puntos. La representación es decisión arquitectónica, no estilística.

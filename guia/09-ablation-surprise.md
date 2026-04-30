@@ -1,4 +1,4 @@
-# Slide 8 — The Ablation Surprise
+# Slide 9 — The Ablation Surprise
 
 ## Tesis
 Más estructura no implica mejor agente. La intuición naive ("más comprobaciones = más calidad") es falsa. El único módulo consistentemente útil es self-evolution (acceptance-gated retry loop).

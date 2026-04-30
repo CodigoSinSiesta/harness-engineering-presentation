@@ -1,4 +1,4 @@
-# Slide 9 — Meta-Harness (Stanford, marzo 2026)
+# Slide 10 — Meta-Harness (Stanford, marzo 2026)
 
 ## Tesis
 Si el harness se puede representar, se puede optimizar. Khattab et al. construyen un loop donde un proposer (Claude Code) lee traces fallidos, escribe un harness nuevo, lo evalúa y guarda el resultado. Repite.

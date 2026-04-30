@@ -1,4 +1,4 @@
-# Slide 14 — Cierre
+# Slide 16 — Cierre
 
 ## Tesis
 La pregunta del campo deja de ser "qué modelo elijo" y pasa a ser "qué estructura elimino". Ese es el cambio de mentalidad que el público debe llevarse.

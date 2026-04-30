@@ -11,24 +11,24 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 8 · The Ablation Surprise</p>
+      <p class="label">Slide 9 · The Ablation Surprise</p>
       <h2 class="title">Más estructura <span class="strike">≠</span> mejor agente.</h2>
       <p class="subtitle">
-        SWE-Bench Verified · GPT-5.4 · Max Reasoning. <strong>~75% Resolved</strong> con 6 módulos activos
-        — y también con LLM + tools y nada más. <strong>14× el cómputo</strong> para el mismo resultado.
+        SWE-Bench Verified · GPT-5.4 · razonamiento máximo. <strong>~75% resueltos</strong> con 6 módulos activos
+        — y también con LLM + herramientas y nada más. <strong>14× el cómputo</strong> para el mismo resultado.
       </p>
     </header>
 
     <section class="ablation-grid">
       <div class="card-glass column col-bad">
         <div class="col-head">
-          <span class="col-tag tag-bad">Expensive Broadening</span>
+          <span class="col-tag tag-bad">Ensanchar caro</span>
           <h3>Lo que <em>parece</em> ayudar — pero perjudica.</h3>
         </div>
 
         <ul class="modules">
           <li class="mod">
-            <div class="mod-name">Verifiers</div>
+            <div class="mod-name">Verificadores</div>
             <div class="mod-desc">Comprobaciones automáticas extra entre pasos.</div>
             <div class="mod-bar">
               <div class="bar-track"><div class="bar bar-neg" style="width: 8%;"></div></div>
@@ -40,7 +40,7 @@
             </div>
           </li>
           <li class="mod">
-            <div class="mod-name">Multi-candidate search</div>
+            <div class="mod-name">Búsqueda multi-candidato</div>
             <div class="mod-desc">Generar varias respuestas y elegir la mejor.</div>
             <div class="mod-bar">
               <div class="bar-track"><div class="bar bar-neg" style="width: 24%;"></div></div>
@@ -56,14 +56,14 @@
 
       <div class="card-glass column col-good">
         <div class="col-head">
-          <span class="col-tag tag-good">Disciplined Narrowing</span>
+          <span class="col-tag tag-good">Estrechar disciplinado</span>
           <h3>Lo que <em>realmente</em> mejora.</h3>
         </div>
 
         <ul class="modules">
           <li class="mod mod-winner">
-            <div class="mod-name">Self-evolution</div>
-            <div class="mod-desc">Acceptance-gated retry loop. Estrecho hasta que el fallo justifique ampliar.</div>
+            <div class="mod-name">Auto-evolución</div>
+            <div class="mod-desc">Bucle de reintento con criterio de aceptación. Estrecho hasta que el fallo justifique ampliar.</div>
             <div class="mod-bar">
               <div class="bar-track"><div class="bar bar-pos" style="width: 48%;"></div></div>
               <span class="bar-label">SWE +4.8</span>
@@ -80,7 +80,7 @@
 
     <p class="punchline">
       <span class="quote-mark">"</span>
-      Disciplined narrowing beats expensive broadening every time.
+      Estrechar con disciplina vence a ensanchar con dinero, siempre.
       <span class="quote-mark">"</span>
     </p>
   </div>

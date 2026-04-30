@@ -7,9 +7,15 @@
 
   onMount(() => {
     animateSlideEntrance(slideElement);
-    setTimeout(() => {
-      if (counterEl) animateCounter(counterEl, 6, 1.6);
-    }, 700);
+
+    const replay = () => {
+      setTimeout(() => {
+        if (counterEl) animateCounter(counterEl, 6, 1.6);
+      }, 700);
+    };
+
+    slideElement.addEventListener('slide-activated', replay);
+    return () => slideElement.removeEventListener('slide-activated', replay);
   });
 </script>
 

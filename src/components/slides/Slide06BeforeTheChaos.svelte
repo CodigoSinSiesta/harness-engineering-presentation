@@ -11,34 +11,34 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 5 · Antes de los papers</p>
+      <p class="label">Slide 6 · Antes de los papers</p>
       <h2 class="title">Sin representación, no hay ablación.</h2>
       <p class="subtitle">
         Dos sistemas que <em>nominalmente</em> diferían en una decisión de diseño,
-        en realidad diferían simultáneamente en prompts, tools, gates y semántica de estado.
+        en realidad diferían simultáneamente en prompts, herramientas, verificadores y semántica de estado.
         Imposible aislar qué cambio causa qué efecto.
       </p>
     </header>
 
-    <section class="card-glass surface ab-block" aria-label="Comparativa System A vs System B">
+    <section class="card-glass surface ab-block" aria-label="Comparativa Sistema A vs Sistema B">
       <div class="ab-grid">
         <div class="ab-col">
-          <div class="ab-head ab-head-a">System A</div>
+          <div class="ab-head ab-head-a">Sistema A</div>
           <ul class="ab-list">
             <li>prompts</li>
-            <li>tools</li>
-            <li>verification gates</li>
-            <li>state semantics</li>
+            <li>herramientas</li>
+            <li>verificadores</li>
+            <li>semántica de estado</li>
           </ul>
         </div>
         <div class="ab-vs">≠</div>
         <div class="ab-col">
-          <div class="ab-head ab-head-b">System B</div>
+          <div class="ab-head ab-head-b">Sistema B</div>
           <ul class="ab-list">
             <li>prompts</li>
-            <li>tools</li>
-            <li>verification gates</li>
-            <li>state semantics</li>
+            <li>herramientas</li>
+            <li>verificadores</li>
+            <li>semántica de estado</li>
           </ul>
         </div>
       </div>

@@ -14,7 +14,7 @@
     {
       n: '02',
       head: 'El harness es el activo de primer nivel',
-      body: 'Si un harness mejora 5 modelos sin retoque, vale más que cualquier modelo individual. <strong>Cambia la economía del producto y reduce el lock-in.</strong>'
+      body: 'Si un harness mejora 5 modelos sin retoque, vale más que cualquier modelo individual. <strong>Cambia la economía del producto y reduce la dependencia del proveedor.</strong>'
     },
     {
       n: '03',
@@ -29,7 +29,7 @@
     {
       n: '05',
       head: 'La disciplina es de sustracción',
-      body: 'Vercel −80% tools. Manus 5 reescrituras. Anthropic eliminando context resets. <strong>El harness se mantiene vivo podándolo</strong>, no engordándolo.'
+      body: 'Vercel −80% herramientas. Manus 5 reescrituras. Anthropic eliminando reinicios de contexto. <strong>El harness se mantiene vivo podándolo</strong>, no engordándolo.'
     }
   ];
 </script>
@@ -39,7 +39,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 13 · Conclusiones</p>
+      <p class="label">Slide 15 · Conclusiones</p>
       <h2 class="title">Cinco hallazgos que <span class="grad">reformulan el campo</span>.</h2>
     </header>
 

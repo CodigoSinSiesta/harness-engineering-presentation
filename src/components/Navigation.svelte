@@ -17,6 +17,7 @@
   const slideNames = [
     'hero',
     'the-gap',
+    'caballo',
     'agent-equation',
     'five-patterns',
     'before-the-chaos',
@@ -27,6 +28,7 @@
     'transferability',
     'three-eras',
     'subtraction',
+    'minimum-harness',
     'conclusions',
     'closing'
   ] as const;
@@ -34,6 +36,7 @@
   const slideTitles: Record<(typeof slideNames)[number], string> = {
     hero: 'Harness Engineering',
     'the-gap': 'El gap del 6×',
+    caballo: 'El arnés del caballo',
     'agent-equation': 'Agent = Model + Harness',
     'five-patterns': '5 patrones canónicos',
     'before-the-chaos': 'El estado caótico',
@@ -44,6 +47,7 @@
     transferability: 'La transferibilidad',
     'three-eras': 'Las tres eras',
     subtraction: 'El oficio de sustracción',
+    'minimum-harness': 'Cómo se ve un arnés mínimo',
     conclusions: 'Conclusiones',
     closing: 'Cierre'
   };
@@ -56,6 +60,7 @@
     if (slides.length > 0) {
       slides[0].classList.add('swiper-slide-active');
       animateSlideEntrance(slides[0]);
+      slides[0].dispatchEvent(new CustomEvent('slide-activated'));
     }
 
     const buttons = document.querySelectorAll('.btn');
@@ -121,6 +126,7 @@
     currentSlide = index;
     slides[currentSlide]?.classList.add('swiper-slide-active');
     animateSlideEntrance(slides[currentSlide]);
+    slides[currentSlide]?.dispatchEvent(new CustomEvent('slide-activated'));
     updateHash(slideNames[currentSlide]);
   }
 

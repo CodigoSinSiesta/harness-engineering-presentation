@@ -7,11 +7,17 @@
 
   onMount(() => {
     animateSlideEntrance(slideElement);
-    setTimeout(() => {
-      svgs.forEach((s, i) => {
-        if (s) setTimeout(() => animateLineDraw(s, 1.0), i * 150);
-      });
-    }, 500);
+
+    const replay = () => {
+      setTimeout(() => {
+        svgs.forEach((s, i) => {
+          if (s) setTimeout(() => animateLineDraw(s, 1.0), i * 150);
+        });
+      }, 500);
+    };
+
+    slideElement.addEventListener("slide-activated", replay);
+    return () => slideElement.removeEventListener("slide-activated", replay);
   });
 
   const patterns = [
@@ -23,16 +29,16 @@
     {
       name: 'Routing',
       desc: 'Un clasificador decide a qué especialista delegar.',
-      use: 'Triaje de inputs heterogéneos.'
+      use: 'Triaje de entradas heterogéneas.'
     },
     {
       name: 'Parallelization',
-      desc: 'Fan-out a workers en paralelo y fan-in con agregador.',
-      use: 'Multi-source retrieval, ensembles.'
+      desc: 'Distribución paralela a trabajadores y agregación al final.',
+      use: 'Recuperación multifuente, ensembles.'
     },
     {
       name: 'Orch-Workers',
-      desc: 'Maestro descompone, workers ejecutan, maestro integra.',
+      desc: 'Maestro descompone, trabajadores ejecutan, maestro integra.',
       use: 'Tareas complejas con sub-objetivos dinámicos.'
     },
     {
@@ -48,7 +54,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 4 · Los 5 patrones canónicos · Anthropic</p>
+      <p class="label">Slide 5 · Los 5 patrones canónicos · Anthropic</p>
       <h2 class="title">Topologías de orquestación</h2>
       <p class="subtitle">
         Todo agente en producción combina varios. Esas decisiones arquitectónicas son las que generan el gap de 6×.
@@ -102,7 +108,7 @@
       <!-- Orch-Workers -->
       <article class="card-glass pattern">
         <h3 class="p-name">{patterns[3].name}</h3>
-        <svg class="p-svg" viewBox="0 0 240 90" bind:this={svgs[3]} role="img" aria-label="Orquestador y workers">
+        <svg class="p-svg" viewBox="0 0 240 90" bind:this={svgs[3]} role="img" aria-label="Orquestador y trabajadores">
           <rect x="100" y="8" width="40" height="22" rx="4" fill="#3B82F6" stroke="#60A5FA" stroke-width="1.6"/>
           <text x="120" y="24" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6">ORCH</text>
           {#each [40, 90, 140, 190] as x, i}
@@ -125,7 +131,7 @@
           <circle cx="200" cy="45" r="16" fill="#1E3A8A" stroke="#a78bfa" stroke-width="2"/>
           <text x="200" y="49" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#a78bfa">EVAL</text>
           <path d="M 200 61 Q 200 85 130 85 Q 60 85 60 61" stroke="#a78bfa" stroke-width="1.6" fill="none" stroke-dasharray="4 3"/>
-          <text x="130" y="80" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#a78bfa">retry on fail</text>
+          <text x="130" y="80" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#a78bfa">reintenta si falla</text>
           <rect x="240" y="32" width="60" height="26" rx="6" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1.4"/>
           <text x="270" y="49" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#22c55e">OK ✓</text>
           <line x1="216" y1="45" x2="240" y2="45" stroke="#22c55e" stroke-width="1.6" stroke-dasharray="3 2"/>

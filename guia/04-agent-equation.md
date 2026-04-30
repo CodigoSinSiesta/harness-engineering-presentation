@@ -1,4 +1,4 @@
-# Slide 3 — Agent = Model + Harness
+# Slide 4 — Agent = Model + Harness
 
 ## Tesis
 Un agente es un modelo más todo lo que lo rodea. La analogía del sistema operativo lo hace operativo: el LLM es la CPU, el harness es el SO.
