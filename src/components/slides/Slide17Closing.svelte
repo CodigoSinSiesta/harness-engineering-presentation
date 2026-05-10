@@ -12,7 +12,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 16 · Cierre</p>
+      <p class="label">Slide 17 · Cierre</p>
       <h2 class="title">
         Ya no es cuestión de <span class="strike">qué modelo elegir</span>.<br/>
         Es cuestión de <span class="grad">qué estructura quitar</span>.

@@ -24,7 +24,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 10 · Paper 2 · Meta-Harness · Stanford · Marzo 2026</p>
+      <p class="label">Slide 11 · Paper 2 · Meta-Harness · Stanford · Marzo 2026</p>
       <h2 class="title">Si el harness es código, <span class="grad">se puede optimizar.</span></h2>
       <p class="subtitle">
         DSPy (Khattab, 2023) ajusta <em>prompts</em> dentro de un pipeline fijo.

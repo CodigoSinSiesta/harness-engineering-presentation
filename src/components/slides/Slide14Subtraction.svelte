@@ -7,9 +7,9 @@
 
   const cases = [
     {
-      org: 'Vercel',
-      action: 'Quitó el 80% de las herramientas de un agente',
-      result: '→ mejores resultados',
+      org: 'Vercel · agente D0',
+      action: '16 herramientas especializadas → filesystem con YAMLs + grep',
+      result: 'Success 80% → 100% · 3.5× más rápido · −40% tokens',
       tag: 'HERRAMIENTAS −80%',
       color: '#22c55e'
     },
@@ -35,7 +35,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 13 · La forma extraña que toma la disciplina</p>
+      <p class="label">Slide 14 · La forma extraña que toma la disciplina</p>
       <h2 class="title">Es <span class="grad">un oficio de sustracción</span> tanto como de adición.</h2>
       <p class="subtitle">
         Cada componente del harness <strong>codifica una asunción</strong> sobre lo que el modelo no puede hacer solo.

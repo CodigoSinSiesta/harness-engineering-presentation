@@ -39,7 +39,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 15 · Conclusiones</p>
+      <p class="label">Slide 16 · Conclusiones</p>
       <h2 class="title">Cinco hallazgos que <span class="grad">reformulan el campo</span>.</h2>
     </header>
 

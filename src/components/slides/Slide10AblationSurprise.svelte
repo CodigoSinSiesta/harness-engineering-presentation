@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 9 · The Ablation Surprise</p>
+      <p class="label">Slide 10 · The Ablation Surprise</p>
       <h2 class="title">Más estructura <span class="strike">≠</span> mejor agente.</h2>
       <p class="subtitle">
         SWE-Bench Verified · GPT-5.4 · razonamiento máximo. <strong>~75% resueltos</strong> con 6 módulos activos

@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 6 · Antes de los papers</p>
+      <p class="label">Slide 7 · Antes de los papers</p>
       <h2 class="title">Sin representación, no hay ablación.</h2>
       <p class="subtitle">
         Dos sistemas que <em>nominalmente</em> diferían en una decisión de diseño,

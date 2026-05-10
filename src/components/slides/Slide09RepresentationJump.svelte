@@ -28,7 +28,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 8 · El experimento de migración · OS-Symphony → NLAH</p>
+      <p class="label">Slide 9 · El experimento de migración · OS-Symphony → NLAH</p>
       <h2 class="title">Misma lógica. Mismo modelo. <span class="grad">+16.8 pts.</span></h2>
       <p class="subtitle">
         Tomas un harness escrito en código nativo. Lo migras a representación NLAH.

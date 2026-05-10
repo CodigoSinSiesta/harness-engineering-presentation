@@ -52,7 +52,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 14 · Cómo se ve un arnés mínimo</p>
+      <p class="label">Slide 15 · Cómo se ve un arnés mínimo</p>
       <h2 class="title">Lo que escribes <span class="grad">el lunes</span>.</h2>
       <p class="subtitle">
         Toda la teoría aterriza en una estructura de ficheros sorprendentemente pequeña.

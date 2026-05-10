@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 12 · Las tres eras</p>
+      <p class="label">Slide 13 · Las tres eras</p>
       <h2 class="title">Cada era <span class="grad">absorbe</span> la anterior.</h2>
       <p class="subtitle">
         Tres disciplinas en cuatro años. Cada una contiene a la previa y añade una capa de control.

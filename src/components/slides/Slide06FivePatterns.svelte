@@ -54,7 +54,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 5 · Los 5 patrones canónicos · Anthropic</p>
+      <p class="label">Slide 6 · Los 5 patrones canónicos · Anthropic</p>
       <h2 class="title">Topologías de orquestación</h2>
       <p class="subtitle">
         Todo agente en producción combina varios. Esas decisiones arquitectónicas son las que generan el gap de 6×.

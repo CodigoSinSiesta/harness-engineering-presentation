@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 7 · Paper 1 · NLAH · Tsinghua · Marzo 2026</p>
+      <p class="label">Slide 8 · Paper 1 · NLAH · Tsinghua · Marzo 2026</p>
       <h2 class="title">Hacer el harness <span class="grad">explícito</span> para poder ablararlo.</h2>
       <p class="subtitle">
         Pan et al. proponen escribir la lógica de control del agente en

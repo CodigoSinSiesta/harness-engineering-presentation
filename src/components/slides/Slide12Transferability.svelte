@@ -32,7 +32,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 11 · Lo que cambia el cálculo</p>
+      <p class="label">Slide 12 · Lo que cambia el cálculo</p>
       <h2 class="title">Un harness optimizado <span class="grad">se transfiere.</span></h2>
       <p class="subtitle">
         El activo reutilizable ya no es el modelo. Es el harness.
