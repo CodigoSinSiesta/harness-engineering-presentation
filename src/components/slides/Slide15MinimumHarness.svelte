@@ -30,9 +30,9 @@
       desc: 'Verifica entorno y tests antes de dejar trabajar. Si falla → para.'
     },
     {
-      file: 'featurelist.json',
-      role: 'Tareas estructuradas',
-      desc: 'Lista pendiente con criterios de aceptación. Estado: done · pendiente.'
+      file: 'specs/<feature>/',
+      role: 'Contexto aislado',
+      desc: 'requirements · design · tasks. Cada agente recibe solo lo que necesita.'
     },
     {
       file: 'progress/',
@@ -42,9 +42,11 @@
     {
       file: '.claude/agents/',
       role: 'Roles del arnés',
-      desc: 'leader · implementer · reviewer. Cada uno con su .md de contrato.'
+      desc: 'leader · spec-author · implementer · reviewer. Cuatro contratos en .md.'
     }
   ];
+
+  const lifecycle = ['pending', 'spec-ready', 'in-progress', 'done'];
 </script>
 
 <div class="swiper-slide" bind:this={slideElement}>
@@ -55,13 +57,13 @@
       <p class="label">Slide 15 · Cómo se ve un arnés mínimo</p>
       <h2 class="title">Lo que escribes <span class="grad">el lunes</span>.</h2>
       <p class="subtitle">
-        Toda la teoría aterriza en una estructura de ficheros sorprendentemente pequeña.
-        Esto es lo que copia <strong>BettaTech</strong> en su repo de ejemplo — y lo que cualquier equipo puede tener montado en una tarde.
+        Con <strong>Spec-Driven Development</strong>: cuatro agentes, tres documentos de spec y un gate humano
+        que separa escritura de implementación. Esto es lo que copia <strong>BettaTech</strong> en su repo — montable en una tarde.
       </p>
     </header>
 
     <section class="layout">
-      <article class="card-glass tree" aria-label="Estructura de ficheros del arnés">
+      <article class="card-glass tree" aria-label="Estructura de ficheros del arnés SDD">
         <header class="tree-header">
           <span class="dot"></span>
           <span>Repositorio</span>
@@ -69,62 +71,92 @@
         <pre class="tree-pre"><code>proyecto/
 ├── <span class="hl">AGENTS.md</span>
 ├── <span class="hl">init.sh</span>
-├── <span class="hl">featurelist.json</span>
+├── <span class="hl">tasks.json</span>
+├── <span class="hl">specs/</span>
+│   └── &lt;feature&gt;/
+│       ├── requirements.md
+│       ├── design.md
+│       └── tasks.md
 ├── <span class="hl">progress/</span>
 │   ├── current.md
 │   └── history.md
 └── .claude/<span class="hl">agents/</span>
     ├── leader.md
+    ├── <span class="hl-spec">spec-author.md</span>
     ├── implementer.md
     └── reviewer.md</code></pre>
       </article>
 
-      <article class="card-glass flow" aria-label="Flujo de orquestación">
+      <article class="card-glass flow" aria-label="Flujo de orquestación SDD con 4 agentes">
         <header class="flow-header">
           <span class="dot"></span>
-          <span>El flujo cada vez que arranca el agente</span>
+          <span>Flujo SDD — 4 agentes + gate humano</span>
         </header>
         <svg
           class="flow-svg"
-          viewBox="0 0 480 280"
+          viewBox="0 0 480 240"
           bind:this={svgEl}
           role="img"
-          aria-label="Flujo: el líder lanza implementador y revisor con progress/ como memoria compartida"
+          aria-label="Flujo SDD: líder spawna spec-author, spec-author escribe specs, gate humano aprueba, líder spawna implementer y revisor que leen specs y escriben en progress"
         >
-          <!-- LEADER -->
-          <rect x="180" y="20" width="120" height="44" rx="8" fill="rgba(59, 130, 246, 0.22)" stroke="#3B82F6" stroke-width="2"/>
-          <text x="240" y="40" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#60A5FA">LÍDER</text>
-          <text x="240" y="55" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">orquestador</text>
+          <!-- LÍDER -->
+          <rect x="180" y="10" width="120" height="40" rx="8" fill="rgba(59, 130, 246, 0.22)" stroke="#3B82F6" stroke-width="2"/>
+          <text x="240" y="28" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#60A5FA">LÍDER</text>
+          <text x="240" y="43" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">orquestador</text>
+
+          <!-- SPEC AUTHOR -->
+          <rect x="10" y="88" width="125" height="40" rx="8" fill="rgba(251, 191, 36, 0.15)" stroke="#FCD34D" stroke-width="2"/>
+          <text x="72" y="106" text-anchor="middle" font-family="JetBrains Mono" font-size="10" letter-spacing="0.08em" fill="#FCD34D">SPEC AUTHOR</text>
+          <text x="72" y="121" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">escribe specs</text>
 
           <!-- IMPLEMENTER -->
-          <rect x="40" y="115" width="140" height="44" rx="8" fill="rgba(96, 165, 250, 0.18)" stroke="#60A5FA" stroke-width="2"/>
-          <text x="110" y="135" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#60A5FA">IMPLEMENTADOR</text>
-          <text x="110" y="150" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">escribe código</text>
+          <rect x="178" y="88" width="120" height="40" rx="8" fill="rgba(96, 165, 250, 0.18)" stroke="#60A5FA" stroke-width="2"/>
+          <text x="238" y="106" text-anchor="middle" font-family="JetBrains Mono" font-size="10" letter-spacing="0.08em" fill="#60A5FA">IMPLEMENTER</text>
+          <text x="238" y="121" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">escribe código</text>
 
-          <!-- REVIEWER -->
-          <rect x="300" y="115" width="140" height="44" rx="8" fill="rgba(167, 139, 250, 0.18)" stroke="#a78bfa" stroke-width="2"/>
-          <text x="370" y="135" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#a78bfa">REVISOR</text>
-          <text x="370" y="150" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">valida + bloquea</text>
+          <!-- REVISOR -->
+          <rect x="348" y="88" width="122" height="40" rx="8" fill="rgba(167, 139, 250, 0.18)" stroke="#a78bfa" stroke-width="2"/>
+          <text x="409" y="106" text-anchor="middle" font-family="JetBrains Mono" font-size="10" letter-spacing="0.08em" fill="#a78bfa">REVISOR</text>
+          <text x="409" y="121" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">valida + bloquea</text>
+
+          <!-- specs/ context isolation -->
+          <rect x="10" y="175" width="125" height="44" rx="10" fill="rgba(251, 191, 36, 0.10)" stroke="#FCD34D" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <text x="72" y="197" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#FCD34D">specs/</text>
+          <text x="72" y="211" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">contexto aislado</text>
 
           <!-- progress/ shared memory -->
-          <rect x="120" y="210" width="240" height="50" rx="10" fill="rgba(34, 197, 94, 0.14)" stroke="#22c55e" stroke-width="2" stroke-dasharray="5 3"/>
-          <text x="240" y="232" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#22c55e">progress/</text>
-          <text x="240" y="248" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">memoria compartida en disco</text>
+          <rect x="240" y="175" width="150" height="44" rx="10" fill="rgba(34, 197, 94, 0.14)" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <text x="315" y="197" text-anchor="middle" font-family="JetBrains Mono" font-size="11" letter-spacing="0.1em" fill="#22c55e">progress/</text>
+          <text x="315" y="211" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#FAF9F6" opacity="0.7">memoria compartida</text>
 
-          <!-- spawn arrows -->
-          <line x1="200" y1="64" x2="120" y2="115" stroke="#60A5FA" stroke-width="1.6" stroke-dasharray="4 3"/>
-          <line x1="280" y1="64" x2="360" y2="115" stroke="#a78bfa" stroke-width="1.6" stroke-dasharray="4 3"/>
+          <!-- Human gate circle between specs/ and progress/ -->
+          <circle cx="207" cy="197" r="14" fill="rgba(34, 197, 94, 0.25)" stroke="#22c55e" stroke-width="2"/>
+          <text x="207" y="202" text-anchor="middle" font-family="JetBrains Mono" font-size="13" fill="#22c55e">✓</text>
 
-          <!-- write/read arrows to progress -->
-          <line x1="110" y1="159" x2="180" y2="210" stroke="#22c55e" stroke-width="1.6"/>
-          <line x1="370" y1="159" x2="300" y2="210" stroke="#22c55e" stroke-width="1.6"/>
-          <line x1="240" y1="64" x2="240" y2="210" stroke="#22c55e" stroke-width="1.4" stroke-dasharray="3 3"/>
+          <!-- spawn arrows from LÍDER -->
+          <line x1="210" y1="50" x2="95" y2="88" stroke="#FCD34D" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="240" y1="50" x2="238" y2="88" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="272" y1="50" x2="370" y2="88" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4 3"/>
 
-          <!-- labels on arrows -->
-          <text x="135" y="100" font-family="JetBrains Mono" font-size="8" fill="#60A5FA" opacity="0.85">lanza</text>
-          <text x="335" y="100" font-family="JetBrains Mono" font-size="8" fill="#a78bfa" opacity="0.85">lanza</text>
-          <text x="130" y="195" font-family="JetBrains Mono" font-size="8" fill="#22c55e" opacity="0.85">escribe</text>
-          <text x="338" y="195" font-family="JetBrains Mono" font-size="8" fill="#22c55e" opacity="0.85">lee</text>
+          <!-- Spec Author → specs/ -->
+          <line x1="72" y1="128" x2="72" y2="175" stroke="#FCD34D" stroke-width="1.6"/>
+
+          <!-- specs/ → gate → progress/ -->
+          <line x1="135" y1="197" x2="193" y2="197" stroke="#22c55e" stroke-width="1.6"/>
+          <line x1="221" y1="197" x2="240" y2="197" stroke="#22c55e" stroke-width="1.6"/>
+
+          <!-- Implementer → progress/ -->
+          <line x1="238" y1="128" x2="282" y2="175" stroke="#22c55e" stroke-width="1.6"/>
+
+          <!-- Revisor → progress/ -->
+          <line x1="392" y1="128" x2="372" y2="175" stroke="#22c55e" stroke-width="1.6"/>
+
+          <!-- Labels -->
+          <text x="130" y="82" font-family="JetBrains Mono" font-size="8" fill="#FCD34D" opacity="0.85">spawns</text>
+          <text x="243" y="78" font-family="JetBrains Mono" font-size="8" fill="#60A5FA" opacity="0.85">spawns</text>
+          <text x="308" y="78" font-family="JetBrains Mono" font-size="8" fill="#a78bfa" opacity="0.85">spawns</text>
+          <text x="40" y="157" font-family="JetBrains Mono" font-size="8" fill="#FCD34D" opacity="0.85">escribe</text>
+          <text x="147" y="192" font-family="JetBrains Mono" font-size="7" fill="#22c55e" opacity="0.85">gate</text>
         </svg>
       </article>
     </section>
@@ -139,9 +171,18 @@
       {/each}
     </section>
 
+    <section class="lifecycle" aria-label="Ciclo de vida de una tarea SDD">
+      {#each lifecycle as step, i}
+        <span class="lc-step">{step}</span>
+        {#if i < lifecycle.length - 1}
+          <span class="lc-arrow">→</span>
+        {/if}
+      {/each}
+    </section>
+
     <p class="closer">
-      <strong>El repo es el sistema.</strong> No hay magia — todo son ficheros que el agente lee
-      antes de empezar y donde escribe lo que va aprendiendo.
+      <strong>El repo es el sistema.</strong> La spec separa el <em>qué</em> del <em>cómo</em>:
+      ningún agente empieza a implementar hasta que el humano aprueba el diseño.
     </p>
   </div>
 </div>
@@ -215,11 +256,12 @@
     overflow-x: auto;
   }
   .tree-pre :global(.hl) { color: var(--color-accent-bright); font-weight: 600; }
+  .tree-pre :global(.hl-spec) { color: #FCD34D; font-weight: 600; }
 
   .flow-svg {
     width: 100%;
     height: auto;
-    max-height: 280px;
+    max-height: 260px;
     background: rgba(10, 22, 40, 0.5);
     border-radius: var(--radius-sm);
     border: 1px solid rgba(96, 165, 250, 0.15);
@@ -251,6 +293,32 @@
   }
   .p-desc { margin: 0; font-size: 0.82rem; line-height: 1.5; opacity: 0.92; }
 
+  .lifecycle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: rgba(10, 22, 40, 0.4);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: var(--radius-md);
+  }
+  .lc-step {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+  }
+  .lc-arrow {
+    color: var(--color-electric);
+    opacity: 0.6;
+    font-size: 1rem;
+  }
+
   .closer {
     margin: 0;
     text-align: center;
@@ -267,5 +335,6 @@
   }
   @media (max-width: 600px) {
     .pieces { grid-template-columns: 1fr; }
+    .lifecycle { flex-wrap: wrap; }
   }
 </style>
