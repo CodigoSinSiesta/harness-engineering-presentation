@@ -1,0 +1,27 @@
+src/components/slides/Slide15MinimumHarness.svelte
+  s_0851cae21a93e5::t_4388b3a4f6fb2d 2-27,30-123
+src/components/slides/Slide05Timeline.svelte
+  s_0851cae21a93e5::t_41ceff5ad602f8 2-3,5-12,14-18,21-25,28-32,35-39,41-116
+src/components/slides/Slide04AgentEquation.svelte
+  s_0851cae21a93e5::t_df02b346df6d4e 2-19,22-85
+src/components/slides/Slide11MetaHarness.svelte
+  s_0851cae21a93e5::t_96315ee1aa3def 2-19,22-92
+src/components/slides/Slide12Transferability.svelte
+  s_0851cae21a93e5::t_bedde40a7e9122 2-27,30-87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "e4e06812ba4c6c3d001964776901bd84996fc0a4",
+  "prompts": {},
+  "sessions": {
+    "s_0851cae21a93e5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8adf6cab-2a03-46e5-8509-a8c3aad9a219",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Alejandro de la Fuente de la Rosa <alejandro.delafuentedelarosa@emeal.nttdata.com>"
+    }
+  }
+}
