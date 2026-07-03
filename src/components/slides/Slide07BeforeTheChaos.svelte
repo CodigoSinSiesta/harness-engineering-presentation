@@ -12,7 +12,7 @@
   <div class="slide-content">
     <header class="slide-header">
       <p class="label">Slide 7 · Antes de los papers</p>
-      <h2 class="title">Sin representación, no hay ablación.</h2>
+      <h2 class="title">Sin representación, no hay forma de aislar qué cambia qué.</h2>
       <p class="subtitle">
         Dos sistemas que <em>nominalmente</em> diferían en una decisión de diseño,
         en realidad diferían simultáneamente en prompts, herramientas, verificadores y semántica de estado.

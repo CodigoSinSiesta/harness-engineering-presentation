@@ -1,4 +1,4 @@
-# Slide 9 — The Ablation Surprise
+# Slide 9 — La sorpresa de quitar piezas
 
 ## Tesis
 Más estructura no implica mejor agente. La intuición naive ("más comprobaciones = más calidad") es falsa. El único módulo consistentemente útil es self-evolution (acceptance-gated retry loop).
@@ -21,4 +21,4 @@ Más estructura no implica mejor agente. La intuición naive ("más comprobacion
 - *"¿Self-evolution es lo mismo que retry?"* → No. Es retry con gate de aceptación que solo amplía cuando la señal de fallo lo justifica.
 
 ## Transición
-"Si cambiar la representación vale 16 puntos y la ablación nos dice que menos es más, entonces el harness es algo optimizable. Eso es lo que hace Stanford."
+"Si cambiar la representación vale 16 puntos y el experimento nos dice que menos es más, entonces el harness es algo optimizable. Eso es lo que hace Stanford."

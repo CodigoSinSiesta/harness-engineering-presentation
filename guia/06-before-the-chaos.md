@@ -1,7 +1,7 @@
 # Slide 6 — El estado caótico antes de la formalización
 
 ## Tesis
-Sin representación explícita del harness, la ablación es imposible. Dos sistemas que "diferían en una decisión" en realidad diferían simultáneamente en cuatro dimensiones — y nadie podía aislar cuál importaba.
+Sin representación explícita del harness, aislar qué cambio causa qué efecto es imposible. Dos sistemas que "diferían en una decisión" en realidad diferían simultáneamente en cuatro dimensiones — y nadie podía aislar cuál importaba.
 
 ## Mensajes clave
 - Sistemas A y B con prompts, tools, gates y state cambiando a la vez = no hay forma de atribuir el delta.

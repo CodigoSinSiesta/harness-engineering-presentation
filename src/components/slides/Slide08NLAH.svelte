@@ -12,7 +12,7 @@
   <div class="slide-content">
     <header class="slide-header">
       <p class="label">Slide 8 · Paper 1 · NLAH · Tsinghua · Marzo 2026</p>
-      <h2 class="title">Hacer el harness <span class="grad">explícito</span> para poder ablararlo.</h2>
+      <h2 class="title">Hacer el harness <span class="grad">explícito</span> para poder compararlo pieza a pieza.</h2>
       <p class="subtitle">
         Pan et al. proponen escribir la lógica de control del agente en
         <strong>lenguaje natural estructurado</strong>, separada en tres capas con responsabilidades distintas.
@@ -77,7 +77,7 @@
       </div>
       <div class="insight-grid">
         <div>
-          <h4>Ablación limpia, por fin.</h4>
+          <h4>Comparación limpia, por fin.</h4>
           <p>
             Fijas el Charter, intercambias el NLAH → testeas <em>diseño del harness</em>.
             Fijas el NLAH, cambias el Charter → testeas <em>política del runtime</em>.
