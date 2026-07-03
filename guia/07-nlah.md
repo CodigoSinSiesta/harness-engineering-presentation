@@ -1,7 +1,7 @@
 # Slide 7 — NLAH (Tsinghua, marzo 2026)
 
 ## Tesis
-Pan et al. proponen separar el harness en tres capas con responsabilidades distintas. La capa de arriba (NLAH) es swappable; la del medio (Charter) es fija. Eso permite ablación controlada.
+Pan et al. proponen separar el harness en tres capas con responsabilidades distintas. La capa de arriba (NLAH) es swappable; la del medio (Charter) es fija. Eso permite experimentos controlados.
 
 ## Mensajes clave
 - **NLAH** (task-specific, SWAP) — Contracts, Roles, Stages, Failure taxonomy. Es lo que defines tú.
@@ -14,7 +14,7 @@ Pan et al. proponen separar el harness en tres capas con responsabilidades disti
 - [[evals]] — sin separación de capas no hay evaluación honesta.
 
 ## Anécdota / hook
-La obsesión de Khattab (DSPy) con "make the agent compilable" es prima hermana de la obsesión de Pan con "make the harness ablatable". Dos equipos, dos países, mismo norte.
+La obsesión de Khattab (DSPy) con "make the agent compilable" es prima hermana de la obsesión de Pan con "make the harness aislable pieza a pieza". Dos equipos, dos países, mismo norte.
 
 ## Preguntas tipo del público
 - *"¿Es esto otro framework más?"* → No. Es una propuesta de **representación**. Cualquier framework puede adoptar la separación.

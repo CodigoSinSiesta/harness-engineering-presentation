@@ -11,7 +11,7 @@
 
   <div class="slide-content">
     <header class="slide-header">
-      <p class="label">Slide 10 · The Ablation Surprise</p>
+      <p class="label">Slide 10 · La sorpresa de quitar piezas</p>
       <h2 class="title">Más estructura <span class="strike">≠</span> mejor agente.</h2>
       <p class="subtitle">
         SWE-Bench Verified · GPT-5.4 · razonamiento máximo. <strong>~75% resueltos</strong> con 6 módulos activos
@@ -19,7 +19,7 @@
       </p>
     </header>
 
-    <section class="ablation-grid">
+    <section class="isolation-grid">
       <div class="card-glass column col-bad">
         <div class="col-head">
           <span class="col-tag tag-bad">Ensanchar caro</span>
@@ -101,7 +101,7 @@
   .strike { color: #f87171; text-decoration: line-through; }
   .subtitle { margin: 0; opacity: 0.84; max-width: 78ch; line-height: 1.55; }
 
-  .ablation-grid {
+  .isolation-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-md);
@@ -193,6 +193,6 @@
   .quote-mark { color: var(--color-electric); font-family: var(--font-display); font-weight: 900; font-size: 1.6em; line-height: 0; vertical-align: -0.35em; opacity: 0.7; }
 
   @media (max-width: 900px) {
-    .ablation-grid { grid-template-columns: 1fr; }
+    .isolation-grid { grid-template-columns: 1fr; }
   }
 </style>

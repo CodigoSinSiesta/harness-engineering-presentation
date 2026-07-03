@@ -18,7 +18,7 @@ La pregunta del campo deja de ser "qué modelo elijo" y pasa a ser "qué estruct
 ## Preguntas tipo del público (Q&A)
 - *"¿Cómo empiezo si no tengo agentes en producción?"* → Empieza por una skill simple en Claude Code, mide lo que tarda, intenta quitarle algo.
 - *"¿Qué libro/curso me recomiendas?"* → Aún no hay libro canónico. Los papers son la fuente. Y este wiki tiene las notas extendidas.
-- *"¿Esto va a cambiar en 6 meses?"* → Los detalles sí. La tesis (representación + ablación + sustracción) parece estable porque tres equipos independientes han convergido.
+- *"¿Esto va a cambiar en 6 meses?"* → Los detalles sí. La tesis (representación + aislar piezas + sustracción) parece estable porque tres equipos independientes han convergido.
 
 ## Transición
 "Gracias. ¿Preguntas?"

@@ -16,7 +16,7 @@ Migrar OS-Symphony (harness en código nativo) a representación NLAH, sin tocar
 "Cuando vi este resultado por primera vez fue cuando me convencí de que esto no era una moda. +55% de accuracy reescribiendo el mismo algoritmo en otra forma — eso es física, no estética."
 
 ## Preguntas tipo del público
-- *"¿Funciona también si reescribo en YAML?"* → Probablemente menos. La estructura permite ablación, pero el lenguaje natural permite que el modelo razone sobre el harness mismo.
+- *"¿Funciona también si reescribo en YAML?"* → Probablemente menos. La estructura permite aislar cambios, pero el lenguaje natural permite que el modelo razone sobre el harness mismo.
 - *"¿Cualquier harness gana 16 puntos?"* → No. Este es el caso reportado. La magnitud depende de cuánto repair loop frágil tuvieras.
 
 ## Transición
